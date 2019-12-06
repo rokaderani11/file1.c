@@ -16,7 +16,7 @@ int main() {
     printf("%d\n",*ptr);   
     sum+=*ptr++;
     ptr++;
-  
+  printf("sum=%d\n",sum);
   }
   return 0;
 }
