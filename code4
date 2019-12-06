@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int sum(int,int);
+int pro(int,int);
+
+int main() 
+{
+  int a=10,b=20,c,d;
+  
+  int (*fp) (int,int);
+  fp=sum;
+  c=fp(a,b);
+  fp=pro;
+  d=fp(a,b);
+  
+  int ch=1,res;
+  int (*fptr) (int,int);
+  if(ch==1)
+    fptr=sum;
+  else
+    fptr=pro;
+  res=fptr(a,b); 
+  return 0;
+
+}
+int sum(int x,int y)
+{
+  return x+y;
+}
+int pro(int x,int y)
+{
+  return x*y;
+}
