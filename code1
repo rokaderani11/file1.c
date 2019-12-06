@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main() {
+  int len=10,sum;
+  int arr[10];      //Let's say base addr is 5200
+  int *ptr=arr;     //base addr, i.e. &arr[0]
+  
+  for(int i=0;i<len;i++)
+  {
+    *ptr = rand()%100;
+    ptr++;
+  }
+
+  ptr=arr;
+  for(int i=0;i<len;i++) 
+  {
+    printf("%d\n",*ptr);   
+    sum+=*ptr++;
+    ptr++;
+  
+  }
+  return 0;
+}
